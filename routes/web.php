@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $data = [
-                "stringa"=> 'ciao mondo!'
-            ];
 
-    return view('welcome', $data);
+    $listaStudenti =['pippo', 'pluto', 'paperino'];
+
+    return view('welcome', ['nome' => 'Studente', 'cognome' => 'Boolean', 'listastudenti' => $listaStudenti]);
+
 });
 
 Route::get('/chi-siamo', function () {

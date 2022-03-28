@@ -7,7 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{ $stringa }}</h1>
+
+    <h1>{{ $nome }} - {{ $cognome }}</h1>
+
+    <ul>
+        @foreach ($listastudenti as $studente)
+            @if ($loop->first)
+                <li>***{{$studente}}</li>
+            @else
+                <li>{{$studente}}</li>
+            @endif
+        @endforeach
+    </ul>
+
 </body>
 </html>
 
